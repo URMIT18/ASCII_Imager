@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII_Imager</title>
+    <title>ASCII Art Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,52 +12,77 @@
             padding: 0;
             background-color: #f7f7f7;
         }
+        
         .container {
-            max-inline-size: 600px;
+            max-inline-size: 500px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 30px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        
         h1 {
             text-align: center;
-            margin-block-end: 20px;
+            color: #333;
+            margin-block-end: 30px;
         }
+        
         form {
             text-align: center;
         }
+        
         label {
             display: block;
             margin-block-end: 10px;
+            color: #555;
         }
+        
         input[type="file"] {
             margin-block-end: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            inline-size: 100%;
+            box-sizing: border-box;
         }
+        
+        input[type="number"] {
+            margin-block-end: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            inline-size: 100%;
+            box-sizing: border-box;
+        }
+        
         button {
             background-color: #007bff;
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+        
         button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>ASCII Image Generator</h1>
         <form action="/ascii" method="POST" enctype="multipart/form-data">
-            <label for="image_file">Upload Image:</label><br>
-            <input type="file" id="image_file" name="image_file" accept="image/*" required><br>
-            <label for="scale">Scale:</label><br>
-            <input type="number" id="scale" name="scale" value="4" min="1" required><br>
-            <button type="submit">Generate ASCII Image</button>
+            <label for="image_file">Upload Image:</label>
+            <input type="file" id="image_file" name="image_file" accept="image/*" required>
+            <label for="scale">Scale:</label>
+            <input type="number" id="scale" name="scale" value="4" min="1" required>
+            <button type="submit">Generate ASCII Image </button>
         </form>
     </div>
 </body>
+
 </html>
